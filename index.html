@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizzeria Ristorante Le Palme | Levanto</title>
+  <meta name="description" content="Pizzeria ristorante Le Palme a Levanto: pizza al forno a legna, cucina ligure, piatti di mare, terrazza e tavoli in centro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Pizzeria Ristorante Le Palme">
+      <img class="brand-logo" src="assets/logo-le-palme-cropped.jpg" alt="Ristorante Pizzeria Le Palme" width="913" height="614" />
+    </a>
+
+    <nav class="nav-links" aria-label="Sezioni del sito">
+      <a href="#menu">Menù</a>
+      <a href="#location">I nostri Aperitivi</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+390187808185" aria-label="Chiama ora Le Palme al numero +39 0187 808185">Chiama ora</a>
+      <button class="menu-toggle" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="language-switch" aria-label="Traduttore italiano inglese">
+        <button class="language-option active" type="button" data-language="it" aria-pressed="true">ITA</button>
+        <button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#menu">Menù</a>
+    <a href="#location">I nostri Aperitivi</a>
+    <a href="#recensioni">Recensioni</a>
+    <a href="#contatti">Contatti</a>
+    <a href="tel:+390187808185">Chiama ora</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/copertina-le-palme.png" alt="" width="1672" height="941" />
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-grid hero-centered">
+        <div class="hero-copy" data-animate>
+          <span class="eyebrow hero-eyebrow">Levanto, Corso Italia 41</span>
+          <h1>Pizzeria Ristorante Le Palme a Levanto</h1>
+          <p>
+            Pizza al forno a legna, cucina ligure e piatti di mare in Corso Italia,
+            a pochi passi dalla spiaggia e dal centro di Levanto.
+          </p>
+
+          <div class="hero-call-cta">
+            <button class="btn hero-booking-button" type="button" data-open-booking-modal>Prenota ora</button>
+          </div>
+
+          <div class="hero-socials" aria-label="Profili social Le Palme">
+            <span class="hero-social-label">Seguici</span>
+            <a class="social-button instagram-link" href="https://www.instagram.com/lepalme_levanto/" target="_blank" rel="noopener noreferrer" aria-label="Apri il profilo Instagram Le Palme">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5.2"></rect>
+                <circle cx="12" cy="12" r="4.15"></circle>
+                <circle cx="17.35" cy="6.65" r="1.1"></circle>
+              </svg>
+            </a>
+            <a class="social-button facebook-link" href="https://www.facebook.com/lepalmesrl" target="_blank" rel="noopener noreferrer" aria-label="Apri la pagina Facebook Le Palme">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                <path d="M14.15 8.45h2.02V5.34c-.35-.05-1.55-.15-2.95-.15-2.91 0-4.9 1.78-4.9 5.05v2.83H5.03v3.48h3.29V24h3.96v-7.45h3.1l.49-3.48h-3.59v-2.48c0-1.01.28-2.14 1.87-2.14Z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="booking-modal" id="bookingModal" aria-hidden="true">
+      <div class="booking-modal-dialog booking-card" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+        <button class="booking-modal-close" type="button" data-close-booking-modal aria-label="Chiudi prenotazione">×</button>
+        <div id="prenota">
+          <span class="eyebrow">Prenota il tuo tavolo</span>
+          <h2 id="bookingModalTitle">Richiedi il tuo tavolo.</h2>
+          <p id="bookingIntro">
+            Scegli giorno, orario e numero di persone: la richiesta arriva già
+            ordinata, pronta per la conferma.
+          </p>
+          <form class="booking-form" data-whatsapp-form>
+            <input id="booking-kind" name="kind" type="hidden" value="tavolo" />
+            <div class="field">
+              <label for="booking-name">Nome</label>
+              <input id="booking-name" name="name" type="text" placeholder="Nome e cognome" required />
+            </div>
+            <div class="field">
+              <label for="booking-phone">Telefono</label>
+              <input id="booking-phone" name="phone" type="tel" placeholder="+39 333 000 0000" required />
+            </div>
+            <div class="field">
+              <label for="booking-date">Data</label>
+              <input id="booking-date" name="date" type="date" required />
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="booking-guests">Persone</label>
+                <input id="booking-guests" name="guests" type="number" min="1" max="20" placeholder="2" required />
+              </div>
+              <div class="field">
+                <label for="booking-time">Orario</label>
+                <input id="booking-time" name="time" type="time" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="booking-notes">Note</label>
+              <input id="booking-notes" name="notes" type="text" placeholder="Terrazza, passeggino, allergie..." />
+            </div>
+            <label class="consent-field" for="booking-privacy">
+              <input id="booking-privacy" name="privacy" type="checkbox" required />
+              <span>Acconsento all'utilizzo dei dati per essere ricontattato in merito alla prenotazione.</span>
+            </label>
+            <button class="btn booking-submit" type="submit">Apri WhatsApp e prenota</button>
+          </form>
+          <a class="direct-phone" href="tel:+390187808185">Preferisci parlare con noi? Chiama +39 0187 808185</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="section menu-section" id="menu">
+      <div class="container menu-showcase">
+        <div class="menu-header" data-animate>
+          <div class="section-title">
+            <span class="menu-kicker">Menù</span>
+            <h2>Pizze, mare e Liguria <span>con passo da ristorante.</span></h2>
+          </div>
+        </div>
+
+        <div class="menu-carousel-shell" data-animate>
+          <div class="menu-visual-grid" aria-label="Anteprima visuale del menù">
+            <article class="menu-visual-card">
+              <img src="assets/risotto-frutti-mare.png" alt="Risotto ai frutti di mare servito da Le Palme" width="1086" height="1448" loading="lazy" decoding="async" />
+              <h3>Risotto ai frutti di mare</h3>
+            </article>
+            <article class="menu-visual-card">
+              <img src="assets/pizza-toscana-black-angus.png" alt="Pizza Toscana con Black Angus" width="1254" height="1254" loading="lazy" decoding="async" />
+              <h3>Pizza Toscana con Black Angus</h3>
+            </article>
+            <article class="menu-visual-card">
+              <img src="assets/antipasto-misto-mare.png" alt="Antipasto misto mare servito da Le Palme" width="1126" height="1442" loading="lazy" decoding="async" />
+              <h3>Antipasto misto mare</h3>
+            </article>
+            <article class="menu-visual-card">
+              <img src="assets/pizza-speciale-piccante.png" alt="Pizza speciale con salame piccante e cipolla rossa" width="1086" height="1448" loading="lazy" decoding="async" />
+              <h3>Pizza speciale</h3>
+            </article>
+          </div>
+          <div class="menu-carousel-hint" aria-label="Scorri le anteprime del menù">
+            <button class="menu-carousel-arrow" type="button" data-menu-carousel-step="-1" aria-label="Anteprima precedente">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <span>Scorri le specialità</span>
+            <button class="menu-carousel-arrow" type="button" data-menu-carousel-step="1" aria-label="Anteprima successiva">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-cta-row menu-cta-centered" data-animate>
+          <button class="menu-cta-button" type="button" data-open-menu-modal>Apri il menù completo</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="menu-modal" id="menuModal" aria-hidden="true">
+      <div class="menu-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="menuModalTitle">
+        <button class="menu-modal-close" type="button" data-close-menu-modal aria-label="Chiudi menu">×</button>
+        <div class="menu-modal-head">
+          <span class="eyebrow">Menù Le Palme</span>
+          <h3 id="menuModalTitle">Il nostro menù</h3>
+          <p>Pizze, focacce, farinata e cucina di mare, dal forno alla tradizione ligure.</p>
+        </div>
+
+        <div class="menu-modal-body">
+          <div class="digital-menu">
+            <div class="menu-modal-tabs" role="tablist" aria-label="Categorie del menù">
+              <button class="menu-tab active" type="button" data-menu-tab="pizze" role="tab" aria-selected="true">Pizze</button>
+              <button class="menu-tab" type="button" data-menu-tab="focacce" role="tab" aria-selected="false">Focacce e farinata</button>
+              <button class="menu-tab" type="button" data-menu-tab="cucina" role="tab" aria-selected="false">Cucina</button>
+            </div>
+
+            <div class="menu-panel" data-menu-panel="pizze">
+              <div class="menu-note">Tasse e coperto: 2,00 &euro; per persona.</div>
+              <div class="menu-category-grid two-columns">
+                <section class="menu-category">
+                  <h4>Pizze classiche</h4>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Marinara <span>(1)</span></strong><span>7 &euro;</span></div><p>Pomodoro, aglio, origano, basilico.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Margherita <span>(1,7)</span></strong><span>8 &euro;</span></div><p>Pomodoro, mozzarella.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>4 Stagioni <span>(1,7)</span></strong><span>13 &euro;</span></div><p>Pomodoro, mozzarella, cotto, carciofi, olive e funghi.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Cinque Terre <span>(1,4)</span></strong><span>12 &euro;</span></div><p>Pomodoro, ciliegini, acciughe, olive, aglio, origano.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Gustosa <span>(1,7)</span></strong><span>13 &euro;</span></div><p>Pomodoro, mozzarella, salame piccante, gorgonzola e cipolla.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Straghiotta <span>(1,7)</span></strong><span>13 &euro;</span></div><p>Pomodoro, mozzarella, prosciutto cotto, peperoni e grana.</p></article>
+                </section>
+
+                <section class="menu-category">
+                  <h4>Pizze speciali</h4>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Bufalina <span>(1,7)</span></strong><span>12 &euro;</span></div><p>Pomodoro, bufala, pomodorini pachino, basilico.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Crudo e Burrata <span>(1,7)</span></strong><span>14 &euro;</span></div><p>Pomodoro, prosciutto crudo e burrata.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Tony <span>(1,7,8)</span></strong><span>14 &euro;</span></div><p>Pomodoro, mozzarella, salsiccia, porcini, grana.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Francesina <span>(1,7)</span></strong><span>13 &euro;</span></div><p>Pomodoro, mozzarella, speck, brie e olive.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Nostromo <span>(1,4)</span></strong><span>14 &euro;</span></div><p>Pomodoro, ciliegini, tonno, olive, cipolla e origano.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Le Palme <span>(1,7)</span></strong><span>12 &euro;</span></div><p>Pomodoro, stracchino, salame e rucola.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Speck Mascarpone <span>(1,7)</span></strong><span>13 &euro;</span></div><p>Pomodoro, speck e mascarpone.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Levantese <span>(1,7,8)</span></strong><span>12 &euro;</span></div><p>Pomodoro, stracchino, pesto.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Norma <span>(1,7)</span></strong><span>14 &euro;</span></div><p>Pomodoro, bufala Campania, melanzana e grana.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Giulia <span>(1,7)</span></strong><span>11 &euro;</span></div><p>Pomodoro, mozzarella, wurstel e patatine fritte.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Ricky <span>(1,7,8)</span></strong><span>14 &euro;</span></div><p>Mozzarella, stracchino, crudo, grana e pesto.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Toscana <span>(1,7)</span></strong><span>14 &euro;</span></div><p>Carpaccio di carne, pomodorini, rucola e grana.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Vegetariana <span>(1,7)</span></strong><span>13 &euro;</span></div><p>Mozzarella, verdure grigliate e rucola.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Quattro Formaggi <span>(1,7)</span></strong><span>12 &euro;</span></div><p>Mozzarella, grana, stracchino e gorgonzola.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Calzone Farcito <span>(1,7)</span></strong><span>12 &euro;</span></div><p>Mozzarella, pomodoro, cotto, funghi, carciofi, wurstel.</p></article>
+                </section>
+              </div>
+            </div>
+
+            <div class="menu-panel" data-menu-panel="focacce" hidden>
+              <div class="menu-category-grid two-columns">
+                <section class="menu-category">
+                  <h4>Focaccia tipo Recco</h4>
+                  <div class="menu-note">Minimo 2 porzioni. Prezzo indicato per porzione.</div>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Semplice <span>(1,7)</span></strong><span>10 &euro;</span></div><p>Focaccia speciale con stracchino.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Al pesto <span>(1,7,8)</span></strong><span>12 &euro;</span></div><p>Focaccia speciale con stracchino e pesto.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Al prosciutto crudo <span>(1,7)</span></strong><span>14 &euro;</span></div><p>Focaccia speciale con stracchino e prosciutto crudo.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Pizzata <span>(1,4,7)</span></strong><span>13 &euro;</span></div><p>Focaccia con formaggio, pomodoro, acciughe, olive e capperi.</p></article>
+                </section>
+
+                <section class="menu-category">
+                  <h4>Farinata di ceci</h4>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Farinata semplice</strong><span>8 &euro;</span></div><p>La classica farinata ligure.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Farinata con stracchino <span>(7)</span></strong><span>10 &euro;</span></div><p>Farinata con stracchino.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Farinata con cipolle</strong><span>10 &euro;</span></div><p>Farinata con cipolle.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Farinata con acciughe e olive <span>(4)</span></strong><span>10 &euro;</span></div><p>Farinata con acciughe e olive.</p></article>
+                </section>
+              </div>
+            </div>
+
+            <div class="menu-panel" data-menu-panel="cucina" hidden>
+              <div class="menu-category-grid three-columns">
+                <section class="menu-category">
+                  <h4>Antipasti</h4>
+                  <h5>Terra</h5>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Caprese con burrata e crudo <span>(7)</span></strong><span>14 &euro;</span></div><p>Pomodori, prosciutto crudo e burrata.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Carpaccio di bresaola <span>(7)</span></strong><span>14 &euro;</span></div><p>Bresaola con grana e rucola.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Melanzana alla parmigiana <span>(1,3,7,9)</span></strong><span>13 &euro;</span></div><p>Melanzane gratinate con pomodoro e formaggio.</p></article>
+                  <h5>Mare</h5>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Antipasto misto mare <span>(1,2,3,4,5,7,8,9,12,14)</span></strong><span>20 &euro;</span></div><p>Antipasto di mare caldo e freddo.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Cocktail di gamberi <span>(2,3,4,12)</span></strong><span>12 &euro;</span></div><p>Gamberetti in salsa cocktail.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Insalata di mare <span>(2,4,8,9,14)</span></strong><span>15 &euro;</span></div><p>Insalata di mare con pinoli e olive.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Tris di acciughe <span>(1,3,4,7,12)</span></strong><span>14 &euro;</span></div><p>Acciuga su focaccia al formaggio e pomodorini, acciuga al limone e acciuga ripiena.</p></article>
+                </section>
+
+                <section class="menu-category">
+                  <h4>Primi piatti</h4>
+                  <h5>Terra</h5>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Ravioli di carne alla bolognese <span>(1,3,7,9,12)</span></strong><span>16 &euro;</span></div><p>Ravioli di carne al sugo di carne.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Pansoti alla salsa di noci <span>(1,3,5,7,8)</span></strong><span>16 &euro;</span></div><p>Ravioli ripieni di verdure e ricotta con salsa di noci.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Trofie alla Portofino <span>(1,3,7,8)</span></strong><span>15 &euro;</span></div><p>Trofie con pesto, patate e fagiolini.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Spaghetti alla carbonara <span>(1,3,7,12)</span></strong><span>16 &euro;</span></div><p>Spaghetti con crema di uova e pecorino e bacon croccante.</p></article>
+                  <h5>Mare</h5>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Tagliolini neri scampi e curry <span>(1,2,3,4,7,12,14)</span></strong><span>20 &euro;</span></div><p>Tagliolini al nero di seppia con scampi e curry.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Spaghetti ai frutti di mare <span>(1,2,3,4,9,12,14)</span></strong><span>19 &euro;</span></div><p>Spaghetti con cozze, vongole, gamberi e gamberetti.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Spaghetti con pesto di pistacchi e cozze <span>(1,2,3,4,8,12,14)</span></strong><span>18 &euro;</span></div><p>Spaghetti con pesto di pistacchi e cozze.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Risotto ai frutti di mare <span>(1,2,4,12,14)</span></strong><span>22 &euro;</span></div><p>Risotto con cozze, vongole, gamberi e gamberetti. Minimo 2 porzioni.</p></article>
+                </section>
+
+                <section class="menu-category">
+                  <h4>Secondi piatti</h4>
+                  <h5>Terra</h5>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Coniglio alla ligure <span>(1,8,12)</span></strong><span>16 &euro;</span></div><p>Coniglio con olive e pinoli.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Tagliata di manzo rucola e pomodorini</strong><span>24 &euro;</span></div><p>Tagliata di manzo con rucola e pomodorini.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Asado con patate <span>(1,3,5)</span></strong><span>18 &euro;</span></div><p>Asado argentino con patate.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Cotoletta di tacchino al panko con patate <span>(1,3,5)</span></strong><span>13 &euro;</span></div><p>Cotoletta di tacchino al panko con patatine fritte.</p></article>
+                  <h5>Mare</h5>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Filetto di orata alla ligure <span>(1,4,8,12)</span></strong><span>22 &euro;</span></div><p>Filetto di orata con pomodorini, olive e pinoli.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Pesce spada alla griglia con verdure <span>(4,5,8)</span></strong><span>21 &euro;</span></div><p>Pesce spada alla griglia con verdure.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Muscoli ripieni <span>(1,3,4,7,9,12,14)</span></strong><span>16 &euro;</span></div><p>Muscoli ripieni al forno con pomodoro.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Muscoli alla marinara <span>(8,12,14)</span></strong><span>14 &euro;</span></div><p>Muscoli bolliti con olio e limone.</p></article>
+                  <article class="menu-item"><div class="menu-item-top"><strong>Fritto misto <span>(1,2,4,5,14*)</span></strong><span>20 &euro;</span></div><p>Frittura mista di calamari, gamberi, scampi e acciughe.</p></article>
+                  <h5>Contorni</h5>
+                  <article class="menu-item compact"><div class="menu-item-top"><strong>Insalata mista</strong><span>5 &euro;</span></div></article>
+                  <article class="menu-item compact"><div class="menu-item-top"><strong>Verdure del giorno</strong><span>7 &euro;</span></div></article>
+                  <article class="menu-item compact"><div class="menu-item-top"><strong>Patatine fritte</strong><span>5 &euro;</span></div></article>
+                </section>
+              </div>
+              <div class="menu-note final-note">* Prodotto occasionalmente surgelato. Allergeni indicati come da menù originale.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section location-section aperitivi-section" id="location">
+      <div class="container location-grid location-showcase-grid">
+        <div class="location-gallery-card aperitivo-image-card" data-animate>
+          <img src="assets/aperitivi.png" alt="Aperitivi con drink e stuzzichini da Le Palme a Levanto" width="1086" height="1448" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="aperitivo-copy-column" data-animate>
+          <span class="section-eyebrow">I nostri Aperitivi</span>
+
+          <div class="location-story-card">
+            <h2>Aperitivo a Levanto, prima di cena o dopo il mare.</h2>
+            <p>
+              Fermati da Le Palme per un aperitivo fresco, luminoso e informale:
+              cocktail, calici, stuzzichini e il piacere di sedersi in centro a
+              Levanto dopo la spiaggia.
+            </p>
+            <p>
+              È il momento giusto per iniziare la serata senza fretta, aspettare
+              gli amici o prenotare un tavolo prima di cena nella Riviera ligure.
+            </p>
+          </div>
+
+          <div class="aperitivo-cta-row">
+            <button class="btn aperitivo-booking-button" type="button" data-open-booking-modal data-booking-kind="aperitivo">Prenota Ora</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews-section" id="recensioni">
+      <div class="container">
+        <div class="reviews-header" data-animate>
+          <span class="section-eyebrow reviews-pill">Recensioni</span>
+          <h2>Le parole dei nostri clienti</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review" data-animate>
+            <div class="review-topline">
+              <span class="stars" aria-label="5 stelle">★★★★★</span>
+              <span class="google-g" aria-label="Google">G</span>
+            </div>
+            <p>"Pizza ottima, focaccia al formaggio spettacolare e locale curato. Torneremo sicuramente."</p>
+            <footer>
+              <strong>Cliente verificato</strong>
+              <span>Recensione online</span>
+            </footer>
+          </article>
+          <article class="review" data-animate>
+            <div class="review-topline">
+              <span class="stars" aria-label="5 stelle">★★★★★</span>
+              <span class="google-g" aria-label="Google">G</span>
+            </div>
+            <p>"Primi piatti abbondanti, pizza buona e personale cordiale. Consigliato per una cena in centro."</p>
+            <footer>
+              <strong>Cliente verificato</strong>
+              <span>Recensione online</span>
+            </footer>
+          </article>
+          <article class="review" data-animate>
+            <div class="review-topline">
+              <span class="stars" aria-label="5 stelle">★★★★★</span>
+              <span class="google-g" aria-label="Google">G</span>
+            </div>
+            <p>"Ambiente luminoso, tavoli comodi e buona scelta tra cucina, pizza e piatti di mare."</p>
+            <footer>
+              <strong>Cliente verificato</strong>
+              <span>Recensione online</span>
+            </footer>
+          </article>
+        </div>
+
+        <div class="review-cta" data-animate>
+          <a class="btn" href="https://www.google.com/search?sca_esv=0aa30729732e2704&amp;rlz=1C5CHFA_enIT984IT984&amp;sxsrf=APpeQnsJaxDsn2eQicwjtXcudk1xcQhXVA:1784817376541&amp;q=Pizzeria+Ristorante+Le+Palme+Recensioni&amp;rflfq=1&amp;num=20&amp;stick=H4sIAAAAAAAAAONgkxIxtDA2MjAyNDM0MTY0MrIAMg0MNjAyvmJUD8isqkotykxUCMosLskvSswrSVXwSVUISMzJTVUISk1OzSvOzM_LXMRKrEoADy83_G8AAAA&amp;rldimm=18320216143122802100&amp;tbm=lcl&amp;hl=it-IT&amp;sa=X&amp;ved=2ahUKEwiXj97tgumVAxVXg_0HHai1DEMQ9fQKegQIOBAG&amp;biw=1440&amp;bih=812&amp;dpr=2#lkt=LocalPoiReviews&amp;lrd=0x12d4edb8fd41fd83:0xfe3e7b847b3625b4,3,,,," target="_blank" rel="noopener noreferrer"><span class="google-g inline">G</span> Lascia una recensione su Google</a>
+          <span>Ci vogliono solo 10 secondi</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contatti">
+      <div class="container contact-grid">
+        <div class="contact-card" data-animate>
+          <span class="section-eyebrow contact-pill">Contatti</span>
+          <h2>Vieni a trovarci.</h2>
+
+          <div class="contact-list">
+            <article class="contact-row">
+              <span class="contact-icon" aria-hidden="true">⌖</span>
+              <div>
+                <strong>Indirizzo</strong>
+                <p>Corso Italia, 41<br />19015 Levanto (SP)</p>
+              </div>
+            </article>
+            <article class="contact-row">
+              <span class="contact-icon" aria-hidden="true">☎</span>
+              <div>
+                <strong>Numero fisso</strong>
+                <a href="tel:+390187808185">+39 0187 808185</a>
+              </div>
+            </article>
+            <article class="contact-row">
+              <span class="contact-icon" aria-hidden="true">@</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:srllepalme@gmail.com">srllepalme@gmail.com</a>
+              </div>
+            </article>
+            <article class="contact-row">
+              <span class="contact-icon" aria-hidden="true">◷</span>
+              <div>
+                <strong>Orari</strong>
+                <p>Lun-Ven 18:30-22:30<br />Sab-Dom 12:30-14:30 / 18:30-22:30</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contact-actions">
+            <button class="btn" type="button" data-open-booking-modal>Prenota ora</button>
+            <a class="btn-ghost dark" href="tel:+390187808185">Chiama ora</a>
+          </div>
+        </div>
+
+        <div class="contact-map-card" data-animate>
+          <iframe
+            title="Mappa per raggiungere Pizzeria Ristorante Le Palme a Levanto"
+            src="https://www.google.com/maps?q=Corso%20Italia%2041%2C%2019015%20Levanto%20SP&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+          <div class="map-card-badge">
+            <strong>Levanto, centro mare</strong>
+            <span>Corso Italia, 41</span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Corso+Italia+41+19015+Levanto+SP" target="_blank" rel="noopener noreferrer">Apri percorso</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-shell">
+      <div class="footer-brand-block">
+        <div class="footer-legal-space">
+          <p class="footer-legal-line footer-legal-company">Pizzeria Ristorante Le Palme</p>
+          <p class="footer-legal-line">Corso Italia, 41 &middot; 19015 Levanto (SP), Italia</p>
+          <p class="footer-legal-line">
+            <a href="tel:+390187808185">Tel: +39 0187 808185</a>
+            <span>&middot;</span>
+            <a href="mailto:srllepalme@gmail.com">srllepalme@gmail.com</a>
+          </p>
+          <p class="footer-legal-line">&copy; <span id="year"></span> Pizzeria Ristorante Le Palme &middot; Tutti i diritti riservati</p>
+        </div>
+      </div>
+
+      <nav class="footer-links-row" aria-label="Sezioni footer">
+        <a href="#menu">Menù</a>
+        <a href="#location">I nostri Aperitivi</a>
+        <a href="#recensioni">Recensioni</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="mobile-bottom-cta" aria-label="Prenotazione rapida">
+    <a href="tel:+390187808185">Chiama ora</a>
+    <a href="#menu">Menù</a>
+  </div>
+
+  <script src="site.js"></script>
+</body>
+</html>
