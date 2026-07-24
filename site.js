@@ -45,6 +45,7 @@ const translations = {
     aperitiviTextTwo: "È il momento giusto per iniziare la serata senza fretta, aspettare gli amici o prenotare un tavolo prima di cena nella Riviera ligure.",
     aperitiviCta: "Prenota Ora",
     reviewsTitle: "Le parole dei nostri clienti",
+    reviewsScroll: "Scorri le recensioni",
     reviewsCta: "Lascia una recensione su Google",
     reviewsHint: "Ci vogliono solo 10 secondi",
     contactsTitle: "Vieni a trovarci.",
@@ -83,6 +84,7 @@ const translations = {
     aperitiviTextTwo: "It is the right moment to start the evening slowly, wait for friends or reserve a table before dinner on the Ligurian Riviera.",
     aperitiviCta: "Book Now",
     reviewsTitle: "What our guests say",
+    reviewsScroll: "Swipe reviews",
     reviewsCta: "Leave a Google review",
     reviewsHint: "It only takes 10 seconds",
     contactsTitle: "Come and visit us.",
@@ -148,11 +150,15 @@ function setLanguage(language) {
   setText(".nav-links a[href='#location'], .mobile-menu a[href='#location'], .footer-links-row a[href='#location']", copy.navAperitivi);
   setText(".nav-links a[href='#recensioni'], .mobile-menu a[href='#recensioni'], .footer-links-row a[href='#recensioni']", copy.navReviews);
   setText(".nav-links a[href='#contatti'], .mobile-menu a[href='#contatti'], .footer-links-row a[href='#contatti']", copy.navContacts);
-  setText(".header-phone, .mobile-menu a[href='tel:+390187808185'], .contact-actions a[href='tel:+390187808185'], .mobile-bottom-cta a[href='tel:+390187808185']", copy.call);
+  setText(".header-phone, .mobile-menu a[href='tel:+390187808185'], .contact-actions a[href='tel:+390187808185']", copy.call);
   setText(".hero-eyebrow", copy.heroEyebrow);
   setText(".hero h1", copy.heroTitle);
   setText(".hero-copy > p", copy.heroText);
-  setText(".hero-booking-button, .contact-actions button[data-open-booking-modal]", copy.book);
+  setText(".hero-booking-button, .contact-actions button[data-open-booking-modal], .mobile-bottom-booking", copy.book);
+  setText(".reviews-scroll-hint", copy.reviewsScroll);
+  document.querySelectorAll(".mobile-bottom-phone").forEach((element) => {
+    element.setAttribute("aria-label", copy.call);
+  });
   setText(".hero-social-label", copy.follow);
   setHtml(".menu-header .section-title h2", copy.menuTitle);
   setText(".menu-cta-button", copy.menuCta);

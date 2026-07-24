@@ -341,6 +341,8 @@
           <h2>Le parole dei nostri clienti</h2>
         </div>
 
+        <div class="reviews-scroll-hint" aria-hidden="true">Scorri le recensioni</div>
+
         <div class="reviews-grid">
           <article class="review" data-animate>
             <div class="review-topline">
@@ -470,8 +472,12 @@
   </footer>
 
   <div class="mobile-bottom-cta" aria-label="Prenotazione rapida">
-    <a href="tel:+390187808185">Chiama ora</a>
-    <a href="#menu">Menù</a>
+    <button class="mobile-bottom-booking" type="button" data-open-booking-modal>Prenota ora</button>
+    <a class="mobile-bottom-phone" href="tel:+390187808185" aria-label="Chiama ora">
+      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.3-.3.75-.39 1.14-.26 1.25.41 2.6.63 3.95.63.61 0 1.1.49 1.1 1.1v3.49c0 .61-.49 1.1-1.1 1.1C10.76 21.24 2.76 13.24 2.76 3.5c0-.61.49-1.1 1.1-1.1h3.5c.61 0 1.1.49 1.1 1.1 0 1.35.22 2.69.63 3.95.12.39.04.83-.27 1.14l-2.2 2.2Z"></path>
+      </svg>
+    </a>
   </div>
 
   <script src="site.js"></script>
