@@ -66,7 +66,6 @@
           </div>
 
           <div class="hero-socials" aria-label="Profili social Le Palme">
-            <span class="hero-social-label">Seguici</span>
             <a class="social-button instagram-link" href="https://www.instagram.com/lepalme_levanto/" target="_blank" rel="noopener noreferrer" aria-label="Apri il profilo Instagram Le Palme">
               <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
                 <rect x="3" y="3" width="18" height="18" rx="5.2"></rect>
@@ -160,15 +159,6 @@
               <img src="assets/pizza-speciale-piccante.png" alt="Pizza speciale con salame piccante e cipolla rossa" width="1086" height="1448" loading="lazy" decoding="async" />
               <h3>Pizza speciale</h3>
             </article>
-          </div>
-          <div class="menu-carousel-hint" aria-label="Scorri le anteprime del menù">
-            <button class="menu-carousel-arrow" type="button" data-menu-carousel-step="-1" aria-label="Anteprima precedente">
-              <span aria-hidden="true">‹</span>
-            </button>
-            <span>Scorri le specialità</span>
-            <button class="menu-carousel-arrow" type="button" data-menu-carousel-step="1" aria-label="Anteprima successiva">
-              <span aria-hidden="true">›</span>
-            </button>
           </div>
         </div>
 
@@ -401,7 +391,11 @@
               </div>
             </article>
             <article class="contact-row">
-              <span class="contact-icon" aria-hidden="true">☎</span>
+              <span class="contact-icon contact-phone-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.3-.3.75-.39 1.14-.26 1.25.41 2.6.63 3.95.63.61 0 1.1.49 1.1 1.1v3.49c0 .61-.49 1.1-1.1 1.1C10.76 21.24 2.76 13.24 2.76 3.5c0-.61.49-1.1 1.1-1.1h3.5c.61 0 1.1.49 1.1 1.1 0 1.35.22 2.69.63 3.95.12.39.04.83-.27 1.14l-2.2 2.2Z"></path>
+                </svg>
+              </span>
               <div>
                 <strong>Numero fisso</strong>
                 <a href="tel:+390187808185">+39 0187 808185</a>
@@ -421,11 +415,6 @@
                 <p>Lun-Ven 18:30-22:30<br />Sab-Dom 12:30-14:30 / 18:30-22:30</p>
               </div>
             </article>
-          </div>
-
-          <div class="contact-actions">
-            <button class="btn" type="button" data-open-booking-modal>Prenota ora</button>
-            <a class="btn-ghost dark" href="tel:+390187808185">Chiama ora</a>
           </div>
         </div>
 
@@ -460,14 +449,32 @@
           </p>
           <p class="footer-legal-line">&copy; <span id="year"></span> Pizzeria Ristorante Le Palme &middot; Tutti i diritti riservati</p>
         </div>
-      </div>
 
-      <nav class="footer-links-row" aria-label="Sezioni footer">
-        <a href="#menu">Menù</a>
-        <a href="#location">I nostri Aperitivi</a>
-        <a href="#recensioni">Recensioni</a>
-        <a href="#contatti">Contatti</a>
-      </nav>
+        <nav class="footer-links-row" aria-label="Sezioni footer">
+          <a href="#menu">Menù</a>
+          <span>&middot;</span>
+          <a href="#location">I nostri Aperitivi</a>
+          <span>&middot;</span>
+          <a href="#recensioni">Recensioni</a>
+          <span>&middot;</span>
+          <a href="#contatti">Contatti</a>
+        </nav>
+
+        <div class="footer-socials" aria-label="Profili social Le Palme">
+          <a class="social-link" href="https://www.instagram.com/lepalme_levanto/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Le Palme">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5.5" stroke="currentColor" stroke-width="1.8"></rect>
+              <circle cx="12" cy="12" r="4.1" stroke="currentColor" stroke-width="1.8"></circle>
+              <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor"></circle>
+            </svg>
+          </a>
+          <a class="social-link" href="https://www.facebook.com/lepalmesrl" target="_blank" rel="noopener noreferrer" aria-label="Facebook Le Palme">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.36 20v-6.58h2.22l.33-2.57h-2.55V9.22c0-.74.21-1.24 1.27-1.24H16V5.67c-.23-.03-1-.09-1.9-.09-1.88 0-3.17 1.15-3.17 3.25v2.02H8.8v2.57h2.13V20h2.43z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 

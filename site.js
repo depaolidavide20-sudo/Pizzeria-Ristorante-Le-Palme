@@ -22,6 +22,8 @@ const bookingIntro = document.getElementById("bookingIntro");
 const languageButtons = document.querySelectorAll("[data-language]");
 const whatsappNumber = "390187808185";
 let currentLanguage = "it";
+let bookingScrollY = 0;
+let bookingScrollLocked = false;
 
 const translations = {
   it: {
@@ -232,6 +234,7 @@ function openBookingModal(trigger) {
   bookingModal.classList.add("open");
   bookingModal.setAttribute("aria-hidden", "false");
   body.classList.add("booking-modal-open");
+  lockBookingScroll();
 }
 
 function closeBookingModal() {
@@ -242,6 +245,35 @@ function closeBookingModal() {
   bookingModal.classList.remove("open");
   bookingModal.setAttribute("aria-hidden", "true");
   body.classList.remove("booking-modal-open");
+  unlockBookingScroll();
+}
+
+function lockBookingScroll() {
+  if (bookingScrollLocked) {
+    return;
+  }
+
+  bookingScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+  body.style.position = "fixed";
+  body.style.top = `-${bookingScrollY}px`;
+  body.style.left = "0";
+  body.style.right = "0";
+  body.style.width = "100%";
+  bookingScrollLocked = true;
+}
+
+function unlockBookingScroll() {
+  if (!bookingScrollLocked) {
+    return;
+  }
+
+  body.style.position = "";
+  body.style.top = "";
+  body.style.left = "";
+  body.style.right = "";
+  body.style.width = "";
+  window.scrollTo(0, bookingScrollY);
+  bookingScrollLocked = false;
 }
 
 function setMenuTab(tabName) {
