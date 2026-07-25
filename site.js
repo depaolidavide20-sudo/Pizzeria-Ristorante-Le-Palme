@@ -24,6 +24,8 @@ const whatsappNumber = "390187808185";
 let currentLanguage = "it";
 let bookingScrollY = 0;
 let bookingScrollLocked = false;
+let bookingBodyStyleBackup = {};
+let bookingHtmlOverflowX = "";
 
 const translations = {
   it: {
@@ -167,7 +169,7 @@ function setLanguage(language) {
   setText(".menu-modal-head .eyebrow", copy.menuModalEyebrow);
   setText("#menuModalTitle", copy.menuModalTitle);
   setText(".menu-modal-head p", copy.menuModalText);
-  setText(".aperitivo-copy-column > .section-eyebrow", copy.navAperitivi);
+  setText(".aperitivo-eyebrow", copy.navAperitivi);
   setText(".location-story-card h2", copy.aperitiviTitle);
   setText(".location-story-card p:nth-of-type(1)", copy.aperitiviTextOne);
   setText(".location-story-card p:nth-of-type(2)", copy.aperitiviTextTwo);
@@ -254,11 +256,25 @@ function lockBookingScroll() {
   }
 
   bookingScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+  bookingBodyStyleBackup = {
+    left: body.style.left,
+    maxWidth: body.style.maxWidth,
+    overflow: body.style.overflow,
+    position: body.style.position,
+    right: body.style.right,
+    top: body.style.top,
+    width: body.style.width,
+  };
+  bookingHtmlOverflowX = document.documentElement.style.overflowX;
+
   body.style.position = "fixed";
   body.style.top = `-${bookingScrollY}px`;
   body.style.left = "0";
   body.style.right = "0";
   body.style.width = "100%";
+  body.style.maxWidth = "100vw";
+  body.style.overflow = "hidden";
+  document.documentElement.style.overflowX = "hidden";
   bookingScrollLocked = true;
 }
 
@@ -267,11 +283,14 @@ function unlockBookingScroll() {
     return;
   }
 
-  body.style.position = "";
-  body.style.top = "";
-  body.style.left = "";
-  body.style.right = "";
-  body.style.width = "";
+  body.style.position = bookingBodyStyleBackup.position || "";
+  body.style.top = bookingBodyStyleBackup.top || "";
+  body.style.left = bookingBodyStyleBackup.left || "";
+  body.style.right = bookingBodyStyleBackup.right || "";
+  body.style.width = bookingBodyStyleBackup.width || "";
+  body.style.maxWidth = bookingBodyStyleBackup.maxWidth || "";
+  body.style.overflow = bookingBodyStyleBackup.overflow || "";
+  document.documentElement.style.overflowX = bookingHtmlOverflowX || "";
   window.scrollTo(0, bookingScrollY);
   bookingScrollLocked = false;
 }
