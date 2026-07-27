@@ -500,11 +500,13 @@ button {
 }
 
 .booking-card {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(174, 230, 247, 0.72);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(20, 168, 212, 0.14), transparent 28%),
+    #070b0f;
+  border: 1px solid rgba(174, 230, 247, 0.18);
   border-radius: 8px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.26);
-  color: var(--ink);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.3);
+  color: var(--white);
   padding: 30px;
 }
 
@@ -537,9 +539,9 @@ button {
 
 .booking-modal-close {
   align-items: center;
-  background: var(--soft-2);
-  border: 1px solid var(--sky-line);
-  color: var(--sky-dark);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(174, 230, 247, 0.22);
+  color: var(--white);
   display: inline-flex;
   font-size: 1.7rem;
   height: 42px;
@@ -561,7 +563,7 @@ button {
 }
 
 .booking-card p {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.66);
   line-height: 1.68;
   margin: 0 0 20px;
 }
@@ -584,22 +586,27 @@ button {
 }
 
 .field label {
-  color: var(--sky-dark);
+  color: #AEE6F7;
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .field input {
-  background: var(--white);
-  border: 1px solid var(--sky-line);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(174, 230, 247, 0.22);
   border-radius: 4px;
-  color: var(--ink);
+  color-scheme: dark;
+  color: var(--white);
   font-weight: 600;
   min-height: 46px;
   min-width: 0;
   padding: 0 12px;
   width: 100%;
+}
+
+.field input::placeholder {
+  color: rgba(255, 255, 255, 0.36);
 }
 
 .field input:focus {
@@ -609,7 +616,7 @@ button {
 
 .consent-field {
   align-items: start;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.66);
   cursor: pointer;
   display: grid;
   font-size: 0.83rem;
@@ -630,7 +637,7 @@ button {
 }
 
 .direct-phone {
-  color: var(--sky-dark);
+  color: #AEE6F7;
   display: block;
   font-size: 0.86rem;
   font-weight: 800;
@@ -1867,7 +1874,7 @@ button {
   }
 
   .booking-modal-close {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 999px;
     height: 34px;
     right: 12px;
