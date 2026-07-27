@@ -4,9 +4,9 @@
   --muted: #65717d;
   --soft: #f4fbfe;
   --soft-2: #e7f8ff;
-  --sky: #17afe3;
-  --sky-dark: #0079ad;
-  --sky-line: #aee6f7;
+  --sky: #14A8D4;
+  --sky-dark: #087EA4;
+  --sky-line: #AEE6F7;
   --black: #050505;
   --footer: #071018;
   --shadow: 0 26px 70px rgba(7, 16, 24, 0.14);
@@ -61,7 +61,7 @@ button {
 
 .image-placeholder {
   background:
-    linear-gradient(135deg, rgba(23, 175, 227, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(20, 168, 212, 0.16), transparent 34%),
     var(--black);
 }
 
@@ -109,7 +109,7 @@ button {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  color: #85ddff;
+  color: #AEE6F7;
   outline: none;
 }
 
@@ -215,6 +215,12 @@ button {
   inset: 0;
   position: absolute;
   z-index: 0;
+}
+
+.hero-media picture {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .hero-media img {
@@ -410,7 +416,7 @@ button {
 .hero-socials a:hover,
 .hero-socials a:focus-visible {
   background: transparent;
-  color: #85ddff;
+  color: #AEE6F7;
   filter: none;
   outline: none;
   transform: translateY(-2px);
@@ -454,18 +460,18 @@ button {
 
 .btn,
 .menu-cta-button {
-  background: linear-gradient(135deg, #18b9ef, #0079ad);
+  background: linear-gradient(135deg, #14A8D4, #087EA4);
   border: 1px solid var(--sky-dark);
   color: var(--white);
-  box-shadow: 0 16px 34px rgba(0, 121, 173, 0.24);
+  box-shadow: 0 16px 34px rgba(8, 126, 164, 0.24);
 }
 
 .btn:hover,
 .btn:focus-visible,
 .menu-cta-button:hover,
 .menu-cta-button:focus-visible {
-  background: linear-gradient(135deg, #0079ad, #005f88);
-  box-shadow: 0 20px 42px rgba(0, 121, 173, 0.34);
+  background: linear-gradient(135deg, #087EA4, #066985);
+  box-shadow: 0 20px 42px rgba(8, 126, 164, 0.34);
   outline: none;
   transform: translateY(-2px);
 }
@@ -598,7 +604,7 @@ button {
 
 .field input:focus {
   border-color: var(--sky-dark);
-  outline: 3px solid rgba(23, 175, 227, 0.14);
+  outline: 3px solid rgba(20, 168, 212, 0.14);
 }
 
 .consent-field {
@@ -639,7 +645,7 @@ button {
 
 .menu-section {
   background:
-    radial-gradient(circle at 12% 12%, rgba(23, 175, 227, 0.11), transparent 26%),
+    radial-gradient(circle at 12% 12%, rgba(20, 168, 212, 0.11), transparent 26%),
     var(--black);
   color: var(--white);
   padding: 64px 0;
@@ -666,7 +672,7 @@ button {
 }
 
 .section-title h2 span {
-  color: #85ddff;
+  color: #AEE6F7;
   display: block;
   font-style: italic;
 }
@@ -807,7 +813,7 @@ button {
 
 .menu-modal-dialog {
   background:
-    radial-gradient(circle at 8% 0%, rgba(23, 175, 227, 0.14), transparent 28%),
+    radial-gradient(circle at 8% 0%, rgba(20, 168, 212, 0.14), transparent 28%),
     #070b0f;
   border: 1px solid rgba(174, 230, 247, 0.18);
   border-radius: 8px;
@@ -871,7 +877,7 @@ button {
   background: transparent;
   border: 1px solid transparent;
   border-radius: 999px;
-  color: #85ddff;
+  color: #AEE6F7;
   font-size: 0.86rem;
   font-weight: 800;
   min-height: 42px;
@@ -893,10 +899,10 @@ button {
 }
 
 .menu-note {
-  background: rgba(23, 175, 227, 0.08);
-  border: 1px solid rgba(23, 175, 227, 0.18);
+  background: rgba(20, 168, 212, 0.08);
+  border: 1px solid rgba(20, 168, 212, 0.18);
   border-radius: 8px;
-  color: #85ddff;
+  color: #AEE6F7;
   font-size: 0.84rem;
   font-weight: 800;
   margin-bottom: 18px;
@@ -929,7 +935,7 @@ button {
 }
 
 .menu-category h4 {
-  border-bottom: 1px solid rgba(23, 175, 227, 0.22);
+  border-bottom: 1px solid rgba(20, 168, 212, 0.22);
   color: var(--white);
   font-family: var(--serif);
   font-size: 2.05rem;
@@ -940,10 +946,10 @@ button {
 }
 
 .menu-category h5 {
-  background: rgba(23, 175, 227, 0.08);
-  border: 1px solid rgba(23, 175, 227, 0.16);
+  background: rgba(20, 168, 212, 0.08);
+  border: 1px solid rgba(20, 168, 212, 0.16);
   border-radius: 999px;
-  color: #85ddff;
+  color: #AEE6F7;
   display: inline-flex;
   font-size: 0.76rem;
   font-weight: 700;
@@ -953,7 +959,7 @@ button {
 }
 
 .menu-item {
-  border-bottom: 1px solid rgba(23, 175, 227, 0.13);
+  border-bottom: 1px solid rgba(20, 168, 212, 0.13);
   display: grid;
   gap: 5px;
   padding: 12px 0;
@@ -988,7 +994,7 @@ button {
 }
 
 .menu-item-top > span {
-  color: #85ddff;
+  color: #AEE6F7;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -1002,7 +1008,7 @@ button {
 
 .location-section {
   background:
-    radial-gradient(circle at 88% 12%, rgba(23, 175, 227, 0.1), transparent 26%),
+    radial-gradient(circle at 88% 12%, rgba(20, 168, 212, 0.1), transparent 26%),
     var(--black);
   color: var(--white);
   padding: 76px 0;
@@ -1207,14 +1213,14 @@ button {
 }
 
 .map-card-badge span {
-  color: #85ddff;
+  color: #AEE6F7;
   font-size: 0.85rem;
   font-weight: 800;
 }
 
 .reviews-section {
   background:
-    radial-gradient(circle at 82% 8%, rgba(23, 175, 227, 0.12), transparent 24%),
+    radial-gradient(circle at 82% 8%, rgba(20, 168, 212, 0.12), transparent 24%),
     var(--black);
   color: var(--white);
 }
@@ -1229,7 +1235,7 @@ button {
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(174, 230, 247, 0.18);
   border-radius: 999px;
-  color: #85ddff;
+  color: #AEE6F7;
   padding: 12px 22px;
 }
 
@@ -1289,7 +1295,7 @@ button {
 }
 
 .stars {
-  color: #85ddff;
+  color: #AEE6F7;
   font-size: 1rem;
   letter-spacing: 0;
 }
@@ -1299,7 +1305,7 @@ button {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(174, 230, 247, 0.18);
   border-radius: 999px;
-  color: #85ddff;
+  color: #AEE6F7;
   display: inline-flex;
   font-size: 0.86rem;
   font-weight: 800;
@@ -1355,13 +1361,13 @@ button {
 }
 
 .review-cta span {
-  color: #85ddff;
+  color: #AEE6F7;
   font-weight: 800;
 }
 
 .contact-section {
   background:
-    radial-gradient(circle at 8% 92%, rgba(23, 175, 227, 0.1), transparent 24%),
+    radial-gradient(circle at 8% 92%, rgba(20, 168, 212, 0.1), transparent 24%),
     var(--black);
   color: var(--white);
   padding: 58px 0;
@@ -1385,10 +1391,10 @@ button {
 }
 
 .contact-pill {
-  background: rgba(23, 175, 227, 0.08);
+  background: rgba(20, 168, 212, 0.08);
   border: 1px solid rgba(174, 230, 247, 0.18);
   border-radius: 999px;
-  color: #85ddff;
+  color: #AEE6F7;
   justify-self: start;
   padding: 10px 18px;
 }
@@ -1425,10 +1431,10 @@ button {
 
 .contact-icon {
   align-items: center;
-  background: rgba(23, 175, 227, 0.08);
+  background: rgba(20, 168, 212, 0.08);
   border: 1px solid rgba(174, 230, 247, 0.18);
   border-radius: 8px;
-  color: #85ddff;
+  color: #AEE6F7;
   display: inline-flex;
   font-size: 1rem;
   height: 40px;
@@ -1444,7 +1450,7 @@ button {
 }
 
 .contact-row strong {
-  color: #85ddff;
+  color: #AEE6F7;
   display: block;
   font-size: 0.68rem;
   font-weight: 800;
@@ -1469,7 +1475,7 @@ button {
 }
 
 .contact-separator {
-  color: rgba(0, 121, 173, 0.36);
+  color: rgba(8, 126, 164, 0.36);
   display: inline-block;
   padding: 0 8px;
 }
@@ -1521,7 +1527,7 @@ button {
 }
 
 .map-card-badge a {
-  color: #85ddff;
+  color: #AEE6F7;
   font-size: 0.82rem;
   font-weight: 800;
   margin-top: 7px;
@@ -1588,7 +1594,7 @@ button {
 .footer-links-row a:hover,
 .footer-legal-space a:focus-visible,
 .footer-links-row a:focus-visible {
-  color: #85ddff;
+  color: #AEE6F7;
   outline: none;
 }
 
@@ -1626,7 +1632,7 @@ button {
 
 .social-link:hover,
 .social-link:focus-visible {
-  color: #85ddff;
+  color: #AEE6F7;
   outline: none;
   transform: translateY(-1px);
 }
@@ -1871,7 +1877,7 @@ button {
   }
 
   .booking-modal-dialog::before {
-    background: rgba(0, 121, 173, 0.28);
+    background: rgba(8, 126, 164, 0.28);
     border-radius: 999px;
     content: "";
     height: 4px;
@@ -2219,7 +2225,7 @@ button {
   }
 
   .reviews-scroll-hint {
-    color: #85ddff;
+    color: #AEE6F7;
     display: flex;
     font-size: 0.78rem;
     font-weight: 800;
@@ -2343,8 +2349,8 @@ button {
   }
 
   .mobile-bottom-booking {
-    background: linear-gradient(135deg, #18b9ef, #0079ad);
-    box-shadow: 0 14px 32px rgba(0, 121, 173, 0.42);
+    background: linear-gradient(135deg, #14A8D4, #087EA4);
+    box-shadow: 0 14px 32px rgba(8, 126, 164, 0.42);
     color: var(--white);
     font-size: 0.9rem;
     font-weight: 900;
